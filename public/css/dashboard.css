@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+  }
+
+  .container1, .container2{
+    width: 50%;
+    height: auto;
+    font-weight: bold;
+    margin-top: 70.4px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+
+  .container1{
+    margin-left: 8%;
+  }
+  .info{
+    margin-bottom: 5%;
+    color: #85C1E9;
+  }
+
+h2{
+    color: #666666;
+}
+
+  h3{
+    color: #AEDDF1;
+  }
+
+
+.task{
+    width: 23.7975rem;
+height: 4.875rem;
+border-radius: 1.36375rem;
+background: rgba(115, 196, 255, 0.50);
+
+box-shadow: 0px 10.91px 32.73px 0px rgba(64, 40, 103, 0.10);
+    display: flex;
+    align-items: center;
+    margin: 2% 0%;
+}
+
+button {
+    color: #ffffff;
+    margin: 5% 60% 0;
+    width: fit-content;
+    background-color: #407BFF;
+    font-size: 19px;
+    border: 1px solid #407BFF;
+    border-radius: 22px;
+    padding: 15px 50px;
+    cursor: pointer
+    
+}
+button:hover {
+    color: #2d63c8;
+    background-color: #ffffff;
+}
+
+.rounded-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-right: 5%;
+    
+    border: 2px solid #333;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.rounded-checkbox:checked {
+    background-color: #333;
+    border-color: #333;
+}
+
+.rounded-image {
+    width: 15%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 50%;
+    margin-left: 2%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.checkbox-label {
+    margin-left: 5px;
+}
+.day{
+    color:#666666;
+}
+
+.container2 {
+    width: 100%;
+    max-width: 35%;
+    max-height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress {
+    width:fit-content;
+    margin-bottom: 5%;
+}
+
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #73C4FF;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-text {
+    font-weight: bolder;
+    color: white;
+    font-size: 25px;
+}
+
+header img {
+    max-width: 70px;
+    height: auto;
+    display: block;
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .info {
+        width: max-content;
+        margin: 0 5% 7% 5%;
+    }
+
+    .container1 {
+        margin: 90px 0 0 0;
+        width: 100%;
+    }
+
+    .container2 {
+        display: none;
+    }
+
+    .task {
+
+        margin: 2% 0;
+
+    }
+
+
+    .week-container {
+        margin:auto;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #73C4FF;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    #menu-bar:checked ~ #menu-label + .navbar {
+        display: block;
+    }
+}

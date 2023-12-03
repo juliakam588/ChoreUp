@@ -5,6 +5,8 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
+
+
 .container1 {
     background-color: rgba(64, 123, 255, 1);
     background-image: linear-gradient(360deg, rgba(64, 123, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
@@ -16,19 +18,22 @@
     justify-content: center;
     align-items: center;
 }
+
 .container1 img {
     max-width: 60%;
     max-height: 60%;
 }
+
 h2 {
     text-align: center;
     font-size: 35px;
 }
+
 .container2 {
     background-color: white;
     width: 45%;
     float: left;
-    height: auto;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -36,43 +41,53 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.login-box {
-    width: 280px;
-    margin: 20px auto;
-    position: static;
-}
-.login-box h1 {
-    text-align: center;
-    margin-bottom: 100px;
-}
-.textbox {
+.right-pane {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    justify-content: center;
+    padding: 20px;
+
 }
-.textbox input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    box-sizing: border-box;
+
+.create-house,
+.join-house {
+
+    font-size: 1rem;
+    padding: 20px;
 }
-.btn {
-    font-weight: bold;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0B6EFE;
-    color: white;
-    cursor: pointer;
+
+.join-house .textbox {
     margin-top: 10px;
 }
+
+
+.textbox input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    left: 40%;
+}
+
+.btn {
+    position: relative;
+    left: 40%;
+    font-weight: bold;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #B2DFFF;
+    color: #1D5D8B;
+    cursor: pointer;
+}
+
 .btn:hover {
     background-color: #0155D0;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -86,53 +101,68 @@ header {
     justify-content: space-between;
     z-index: 1000;
 }
+
 .logo {
     display: flex;
     align-items: center;
 }
+
 header .logo-text {
     font-weight: bolder;
     color: white;
     font-size: 25px;
 }
+
 header img {
-    width: 70px;
+    max-width: 70px;
     height: auto;
     display: block;
 }
+
 header .navbar ul {
     list-style: none;
 }
+
 header .navbar ul li {
     position: relative;
     float: left;
 }
+
 header .navbar ul li a {
     font-size: 20px;
     padding: 20px;
     color: white;
     display: block;
 }
+
 #menu-bar {
     display: none;
 }
+
 header label {
-    font-size: 20px;
+    font-size: 1.2em;
     color: white;
     cursor: pointer;
     display: none;
 }
+
 @media (max-width: 991px) {
     body {
         background: white;
-        margin-top: 0;
-   }
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     header {
         padding: 10px;
-   }
+    }
+
     header label {
         display: initial;
-   }
+    }
+
     header .navbar {
         position: absolute;
         top: 100%;
@@ -141,24 +171,45 @@ header label {
         background: #73C4FF;
         border-top: 1px solid rgba(0, 0, 0, .1);
         display: none;
-   }
+    }
+
     header .navbar ul li {
         width: 100%;
-   }
+    }
+
     #menu-bar:checked ~ #menu-label + .navbar {
         display: block;
-   }
-    .container1, .container2 {
-        background-color: white;
+    }
+
+    .container2 {
         width: 100%;
-        float: none;
-   }
-    .login-box {
-        width: 280px;
-        margin: 10px auto;
-        position: static;
-   }
-    .container1, .container1 img {
+        font-size: 1.5vh;
+        height: fit-content;
+    }
+
+    .right-pane{
+        padding: 1vh;
+        line-height: 3vh;
+        
+    }
+
+
+    .container1 img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .container1 h2 {
         display: none;
-   }
+    }
+
+    .container1 {
+        background: none;
+        height:fit-content;
+    }
+
 }
