@@ -2,7 +2,7 @@
 
 class User{
     private $email;
-    private $password;
+    private $hashedPassword;
     private $name;
 
 
@@ -10,7 +10,7 @@ class User{
     public function __construct(string $email, string $password, string $name) {
     
         $this->email = $email;
-        $this->password = $password;
+        $this->hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $this->name = $name;
     }
 
@@ -19,9 +19,9 @@ class User{
         return $this->email;
     }
 
-    public function getPassword()
+    public function gethashedPassword()
     {
-        return $this->password;
+        return $this->hashedPassword;
     }
 
     public function getName(): string
