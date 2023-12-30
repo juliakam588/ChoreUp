@@ -28,18 +28,27 @@
       </div>
       
       <div class="container2">
-         <form class="login-box">
+         <form class="login-box" action="registration" method="POST">
             <h1>Join us!</h1>
-            <div class="textbox">
-               <input type="text" placeholder="email" name="" value="">
+            <div class="messages">
+            <?php
+               if(isset($messages)){
+                  foreach($messages as $message) {
+                     echo $message;
+                  }
+                }
+            ?>
             </div>
             <div class="textbox">
-                <input type="text" placeholder="first name" name="" value="">
+               <input type="text" placeholder="email" name="email" value="">
+            </div>
+            <div class="textbox">
+                <input type="text" placeholder="first name" name="name" value="">
              </div>
             <div class="textbox">
-               <input type="password" placeholder="password" name="" value="">
+               <input type="password" placeholder="password" name="password" value="">
             </div>
-            <input class="btn" type="button" name="" value="Register">
+            <input class="btn" type="submit" name="submit" value="Register">
          </form>
       </div>
    </body>
