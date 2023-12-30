@@ -31,4 +31,23 @@ class DefaultController extends AppController {
     public function household() {
         $this->render('household');
     }
+
+    public function chores() {
+        $this->render('chores');
+    }
+    
+    public function chore_mopping() {
+        $this->render('chore_mopping');
+    }
+
+    public function chore_vacuum() {
+        $this->render('chore_vacuum');
+    }
+
+    public function chore_rubbish() {
+        $this->render('chore_rubbish');
+    }
+    public function edit() {
+        $this->render('edit');
+    }
 }
