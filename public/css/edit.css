@@ -14,6 +14,11 @@
   }
 
 
+.messages{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
 
  .title{
     color: #407BFF;

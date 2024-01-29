@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
+
 .container1 {
     background-color: rgba(64, 123, 255, 1);
     background-image: linear-gradient(360deg, rgba(64, 123, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
@@ -29,7 +30,7 @@ h2 {
     width: 45%;
     float: left;
     height: auto;
-    margin: 0;
+    margin-top: 10%;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -44,6 +45,12 @@ h2 {
 .login-box h1 {
     text-align: center;
     margin-bottom: 100px;
+}
+
+.messages{
+    display: flex;
+    justify-content: center;
+    color: red;
 }
 .textbox {
     display: flex;
@@ -152,6 +159,7 @@ header label {
         background-color: white;
         width: 100%;
         float: none;
+        margin-top: 40%;
    }
     .login-box {
         width: 280px;

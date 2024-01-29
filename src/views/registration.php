@@ -17,8 +17,8 @@
          <label for="menu-bar" id="menu-label">&#9776;</label>
          <nav class="navbar">
             <ul>
-               <li><a href="#">Login</a></li>
-               <li><a href="#">Registration</a></li>
+               <li><a href="/login">Login</a></li>
+               <li><a href="/registration">Registration</a></li>
             </ul>
          </nav>
       </header>
@@ -28,7 +28,7 @@
       </div>
       
       <div class="container2">
-         <form class="login-box" action="registration" method="POST">
+         <form class="login-box" action="registration" method="POST" enctype="multipart/form-data">
             <h1>Join us!</h1>
             <div class="messages">
             <?php
@@ -48,7 +48,12 @@
             <div class="textbox">
                <input type="password" placeholder="password" name="password" value="">
             </div>
-            <input class="btn" type="submit" name="submit" value="Register">
+             <div class="textbox">
+                 <label for="photo">Profile Photo:</label>
+                 <input type="file" name="file">
+             </div>
+             <input class="btn" type="submit" name="submit" value="Register">
+
          </form>
       </div>
    </body>

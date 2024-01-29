@@ -18,8 +18,8 @@
          <label for="menu-bar" id="menu-label">&#9776;</label>
          <nav class="navbar">
             <ul>
-               <li><a href="#">Login</a></li>
-               <li><a href="#">Registration</a></li>
+               <li><a href="/login">Login</a></li>
+               <li><a href="/registration">Registration</a></li>
             </ul>
          </nav>
       </header>

@@ -17,30 +17,33 @@
          <label for="menu-bar" id="menu-label">&#9776;</label>
          <nav class="navbar">
             <ul>
-               <li><a href="#">Home</a></li>
-               <li><a href="#">Chores</a></li>
-               <li><a href="#">Household members</a></li>
+               <li><a href="/dashboard">Home</a></li>
+               <li><a href="/household">Household members</a></li>
+               <li><a href="/logout">Log out</a></li>
             </ul>
          </nav>
     </header>
 
     <h2 class="household">Household members</h2>
     <div class="members">
-
+        <?php foreach ($members as $member): ?>
+        <?php if ($member['is_admin']): ?>
         <div class="host">
             <img src="public/media/roof.png" alt="Roof Image" class="roof">
-            <div class="user"><img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-image">
-                <h2>Charlie</h2></div>
+            <div class="user">
+                <img src="public/uploads/<?php echo $member['photo']; ?>" width="100" class="rounded-image" alt="">
+                <h2><?php echo htmlspecialchars($member['name']); ?></h2></div>
         </div>
+        <?php endif; ?>
+        <?php if (!$member['is_admin']): ?>
         <div class="users">
-            <div class="user"><img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-image">
-            <h2>Trish</h2></div>
-            <div class="user"><img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-image">
-                <h2>Allie</h2></div>
-            <div class="user"><img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-image">
-                <h2>Jonathan</h2></div> 
+            <div class="user">
+                <img src="public/uploads/<?php echo $member['photo']; ?>" width="100" class="rounded-image" alt="">
+                <h2><?php echo htmlspecialchars($member['name']); ?></h2></div>
         </div>
+            <?php endif; ?>
 
+        <?php endforeach; ?>
     </div>
     
 </body>
