@@ -1,4 +1,4 @@
-@import url('/public/css/navbar.css');
+@import url('/public/css/style.css');
 
 body {
     margin: 0;
@@ -29,6 +29,37 @@ form {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.buttons .btn {
+    background-color: #407BFF;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: 2px solid #407BFF;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.buttons button {
+    background-color: transparent;
+    color: #407BFF;
+    border: 2px solid #407BFF;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
 
 .select {
@@ -122,4 +153,9 @@ input[type="submit"]:hover {
     .message{
         margin-top: 150px;
     }
+
+    .btn{
+        width:50%;
+    }
+
 }

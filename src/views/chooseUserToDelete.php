@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit chore</title>
+    <title>Delete members</title>
     <link rel="stylesheet" href="public/css/editChore.css">
-    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
@@ -33,46 +32,23 @@ if (isset($_SESSION['messages'])) {
     unset($_SESSION['messages']);
 }
 ?>
-<form action="/saveChore" method="POST">
-    <div class="title">
-        <?php if (isset($choreDetails['name'])): ?>
-            <h2><?= htmlspecialchars($choreDetails['name']); ?></h2>
-        <?php endif; ?>
-    </div>
-
-    <label class="select" for="days">
-        <h2>Choose the weekday:</h2>
-        <select id="days" name="days">
-            <option value="" disabled selected>Choose weekday</option>
-            <?php foreach ($weekdays as $day): ?>
-                <option value="<?= $day; ?>" <?= (isset($choreDetails['day_name']) && $day === $choreDetails['day_name']) ? 'selected' : ''; ?>>
-                    <?= $day; ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-    </label>
-
-    <label class="select" for="members">
+<form action="/deleteUser" method="POST">
+    <label for="members">
         <h2>Choose the member:</h2>
         <select id="members" name="members">
             <option value="" disabled selected>Choose member</option>
             <?php foreach ($members as $member): ?>
-                <option value="<?= $member['id']; ?>" <?= (isset($choreDetails['user_id']) && $member['id'] === $choreDetails['user_id']) ? 'selected' : ''; ?>>
-                    <?= htmlspecialchars($member['name']); ?>
-                </option>
+                <?php if (!$member['is_admin']): ?>
+                    <option value="<?= $member['id']; ?>">
+                        <?= htmlspecialchars($member['name']); ?>
+                    </option>
+                <?php endif; ?>
             <?php endforeach; ?>
         </select>
     </label>
-
-    <?php if (isset($choreDetails['id'])): ?>
-        <input type="hidden" name="userChoreId" value="<?= $choreDetails['id']; ?>">
-    <?php endif; ?>
-
-    <input type="submit" value="Save">
+    <input type="submit" value="Delete">
 </form>
 
-
-<!-- SVG Sprites-->
 <svg class="sprites">
     <symbol id="select-arrow-down" viewbox="0 0 10 6">
         <polyline points="1 1 5 5 9 1"></polyline>

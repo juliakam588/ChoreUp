@@ -64,6 +64,13 @@ header label {
     display: none;
 }
 
+.no-valid {
+    border: 10px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 1em red;
+    outline: none;
+}
+
 @media (max-width: 991px) {
     header {
         padding: 10px;

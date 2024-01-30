@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Household members</title>
+    <title>Confirm deletion</title>
     <link rel="stylesheet" href="public/css/editChore.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
@@ -24,12 +24,15 @@
         </ul>
     </nav>
 </header>
+
 <div class="confirm-delete">
     <h1>Are you sure you want to delete this task?</h1>
     <form action="/deleteChore" method="POST">
-        <input type="hidden" name="userChoreId" value="<?= $userChoreId; ?>">
-        <button type="submit" class="btn-confirm">Yes, delete it</button>
-        <a href="/edit" class="btn-cancel">Cancel</a>
+        <div class="buttons">
+            <input type="hidden" name="userChoreId" value="<?= $userChoreId; ?>">
+            <button type="submit" class="btn">Yes, delete it</button>
+            <a href="/edit" class="btn-cancel">Cancel</a>
+        </div>
     </form>
 </div>
 
