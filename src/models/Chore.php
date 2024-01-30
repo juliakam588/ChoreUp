@@ -5,6 +5,14 @@ class Chore
     private $choreId;
     private $choreName;
 
+
+    public function __construct($choreId, $choreName)
+    {
+        $this->choreId = $choreId;
+        $this->choreName = $choreName;
+    }
+
+
     public function getChoreId(): int
     {
         return $this->choreId;

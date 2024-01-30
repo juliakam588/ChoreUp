@@ -3,6 +3,14 @@
 class Household {
     private $householdId;
     private $householdCode;
+    private $users;
+
+    public function __construct($householdId, $householdCode)
+    {
+        $this->householdId = $householdId;
+        $this->householdCode = $householdCode;
+    }
+
 
     public function getHouseholdId(): int
     {
@@ -24,5 +32,12 @@ class Household {
         $this->householdCode = $householdCode;
     }
 
+    public function getUsers(): array {
+        return $this->users;
+    }
+
+    public function setUsers(array $users): void {
+        $this->users = $users;
+    }
 
 }
